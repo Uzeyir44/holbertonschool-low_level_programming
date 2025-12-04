@@ -3,6 +3,6 @@
 
 int main(void)
 {
-    printf("_putchar\n");
+    _putchar("_putchar\n");
     return (0);
 }
