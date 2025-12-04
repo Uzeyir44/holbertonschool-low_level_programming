@@ -11,9 +11,3 @@ void print_alphabet(void)
     _putchar('\n');
     return;
 }
-
-int main(void)
-{
-    print_alphabet();
-    return (0);
-}
