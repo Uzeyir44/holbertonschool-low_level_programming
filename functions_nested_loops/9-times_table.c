@@ -25,8 +25,15 @@ void times_table(void)
                 }
                 else
                 {
-                    _putchar('0' + (b / 10));
-                    _putchar('0' + (b % 10));
+                    if (b<10)
+                    {
+                        _putchar('0' + b);
+                    }
+                    else
+                    {
+                        _putchar('0' + (b / 10));
+                        _putchar('0' + (b % 10));
+                    }
                     _putchar(',');
                     _putchar(' ');
                 }
