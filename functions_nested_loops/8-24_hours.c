@@ -18,7 +18,7 @@ void jack_bauer(void)
                     _putchar(':');
                     _putchar('0');
                     _putchar('0' + minute);
-                    _putchar('\n')
+                    _putchar('\n');
                 }
                 else
                 {
@@ -27,7 +27,7 @@ void jack_bauer(void)
                     _putchar(':');
                     _putchar('0' + (minute / 10));
                     _putchar('0' + (minute % 10));
-                    _putchar('\n')
+                    _putchar('\n');
                 }
             }
             else
@@ -39,7 +39,7 @@ void jack_bauer(void)
                     _putchar(':');
                     _putchar('0');
                     _putchar('0' + minute);
-                    _putchar('\n')
+                    _putchar('\n');
                 }
                 else
                 {
@@ -48,7 +48,7 @@ void jack_bauer(void)
                     _putchar(':');
                     _putchar('0' + (minute / 10));
                     _putchar('0' + (minute % 10));
-                    _putchar('\n')
+                    _putchar('\n');
                 }
             }
         }
