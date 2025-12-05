@@ -1,6 +1,7 @@
 #ifndef MAIN_H
 #define MAIN_H
 
+int _putchar(char c);  /* prototype for the provided function */
 int _isupper(int c); /* finds uppercase */
 int _isdigit(int c); /* finds number between 0-9 */
 int mul(int a, int b); /* multiplies two integers */
