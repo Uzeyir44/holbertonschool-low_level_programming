@@ -46,8 +46,8 @@ void times_table(void)
                 }
             }
             b = b + c;
-            _putchar('\n');
         }
+        _putchar('\n');
         c++;
     }
 
