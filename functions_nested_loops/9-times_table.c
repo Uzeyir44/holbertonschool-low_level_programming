@@ -29,12 +29,11 @@ void times_table(void)
                     _putchar('0' + (b % 10));
                     _putchar(',');
                     _putchar(' ');
-                    _putchar(' ');
                 }
             }
             else
             {
-                if ((b+c) < 10)
+                if (b < 10)
                 {
                     _putchar('0' + b);
 
