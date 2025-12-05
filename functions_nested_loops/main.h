@@ -8,5 +8,6 @@ int _islower(int c); /* find lower case */
 int _isalpha(int c); /* find lower and upper case */
 int print_sign(int n); /* find is number positive, negative or 0*/
 int _abs(int); /* absolute value of number */
+int print_last_digit(int); /* prints the last digit */
 
 #endif
