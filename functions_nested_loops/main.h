@@ -12,5 +12,6 @@ int print_last_digit(int); /* prints the last digit */
 void jack_bauer(void); /* prints every minute of the day */
 void times_table(void); /* time table */
 int add(int, int); /* sum of 2 integers */
+void print_to_98(int n); /* from n to 98 */
 
 #endif
