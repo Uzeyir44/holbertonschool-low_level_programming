@@ -6,5 +6,6 @@ void print_alphabet(void); /* prototype for print_alphabet */
 void print_alphabet_x10(void); /* alphabet 10 times */
 int _islower(int c); /* find lower case */
 int _isalpha(int c); /* find lower and upper case */
+int print_sign(int n); /* find is number positive, negative or 0*/
 
 #endif
