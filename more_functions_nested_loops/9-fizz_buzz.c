@@ -29,7 +29,10 @@ int main(void)
             }
         }
 
-        printf(" ");
+        if (i != 100)
+        {
+            printf(" ");
+        }
     }
 
     return (0);
