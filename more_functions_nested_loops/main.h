@@ -11,5 +11,6 @@ void more_numbers(void); /* 10 times from 0 to 14 */
 void print_line(int n); /* print strait line */
 void print_diagonal(int n); /* prints the diogonal */
 void print_square(int size); /* prints square */
+void print_triangle(int size); /* prints triangle */
 
 #endif 
