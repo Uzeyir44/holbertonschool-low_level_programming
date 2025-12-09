@@ -1,30 +1,35 @@
 #include "main.h"
 
 /**
- * _atoi - converts a string to an integer
+ * _atoi - converts the first integer found in a string to an int
  * @s: input string
  *
- * Return: integer value of the number in the string
+ * Return: integer value of the first number found
  */
 int _atoi(char *s)
 {
     int i = 0;
     int num = 0;
     int negative = 0;
+    int found_digit = 0;
 
-    while (s[i] == ' ')
-        i++;
-
-    while (s[i] == '-' || s[i] == '+' || s[i] == ' ')
+    while (s[i] != '\0')
     {
         if (s[i] == '-')
-            negative++;
-        i++;
-    }
-
-    while (s[i] >= '0' && s[i] <= '9')
-    {
-        num = num * 10 + (s[i] - '0');
+        {
+            if (!found_digit)
+                negative++;
+        }
+        else if (s[i] >= '0' && s[i] <= '9')
+        {
+            found_digit = 1;
+            num = num * 10 + (s[i] - '0');
+        }
+        else
+        {
+            if (found_digit)
+                break;
+        }
         i++;
     }
 
