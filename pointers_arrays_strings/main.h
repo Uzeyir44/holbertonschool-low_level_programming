@@ -11,5 +11,6 @@ void rev_string(char *s); /* reverses a string */
 void puts2(char *str); /* prints the characters of string with step = 2 */
 void puts_half(char *str); /* prints the string from the middle */
 void print_array(int *a, int n); /* prints the n numbers of an array */
+char *_strcpy(char *dest, char *src); /* copies the value of one string to another */
 
 #endif
