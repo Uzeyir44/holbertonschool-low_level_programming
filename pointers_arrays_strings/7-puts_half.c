@@ -2,18 +2,20 @@
 
 void puts_half(char *str)
 {
-    char *etm = str;
+    int i;
 
-    while (*etm != '\0')
+    i = 0;
+
+    while (str[i] != '\0')
     {
-        etm++;
+        i++;
     }
 
-    etm = (etm + 1) / 2;
+    i = (i + 1) / 2;
 
-    while (*etm != '\0')
+    while (str[i] != '\0')
     {
-        _putchar(*etm);
-        etm++;
+        _putchar(str[i]);
+        i++;
     }
 }
