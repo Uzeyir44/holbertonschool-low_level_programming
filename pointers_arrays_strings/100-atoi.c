@@ -14,12 +14,12 @@ int _atoi(char *s)
         {
             sign = s[c];
         }
-        
+
         if (s[c] >= '0' && s[c] <= '9')
         {
             if (c == 0)
             {
-                sign = '+'
+                sign = '+';
             }
 
             num = num * 10 + (s[c] - '0');
