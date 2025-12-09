@@ -33,7 +33,7 @@ int _atoi(char *s)
         c++;
     }
 
-    if (sign == '+' || sign == " ")
+    if (sign == '+' || sign == ' ')
     {
         return (num);
     }
