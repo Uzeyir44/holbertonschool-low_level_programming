@@ -8,5 +8,6 @@ int _strlen(char *s); /* returns the length of string */
 void _puts(char *str); /* prints string */
 void print_rev(char *s); /* prints a string in reverse */
 void rev_string(char *s); /* reverses a string */
+void puts2(char *str); /* prints the characters of string with step = 2 */
 
 #endif
