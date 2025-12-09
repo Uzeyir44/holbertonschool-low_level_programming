@@ -4,14 +4,13 @@ void rev_string(char *s)
 {
     int i;
     int c;
+    char ss[10];
 
     i = 0;
     while (s[i] != '\0')
     {
         i++;
     }
-
-    char ss[10];
 
     for (c = 0; c <= i; c++)
     {
