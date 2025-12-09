@@ -4,21 +4,18 @@ void rev_string(char *s)
 {
     int i;
     int c;
-    char ss[10];
-
+    char a;
+    
     i = 0;
+
     while (s[i] != '\0')
     {
         i++;
     }
 
-    for (c = 0; c <= i; c++)
+    for (c = 0; c <= (i/2); c++)
     {
-        ss[c] = s[c];
-    }
-
-    for (c = 0; c <= i; c++)
-    {
-        s[c] = ss[i-c];
+        a = s[c];
+        s[c] = s[i-c];
     }
 }
