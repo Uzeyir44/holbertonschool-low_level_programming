@@ -1,4 +1,5 @@
 #include "main.h"
+#include <stdio.h>
 
 void print_array(int *a, int n)
 {
@@ -12,6 +13,6 @@ void print_array(int *a, int n)
             _putchar(' ');
         }
 
-        _putchar(a[i]);
+        printf("%d", a[i]);
     }
 }
