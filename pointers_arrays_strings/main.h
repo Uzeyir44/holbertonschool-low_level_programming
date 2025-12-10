@@ -14,5 +14,6 @@ void print_array(int *a, int n); /* prints the n numbers of an array */
 char *_strcpy(char *dest, char *src); /* copies the value of one string to another */
 int _atoi(char *s); /* converts string to an integer */
 char *_strcat(char *dest, char *src); /* cocatenates two strings */
+char *_strncat(char *dest, char *src, int n); /* concatanetes two strings till n character */
 
 #endif
