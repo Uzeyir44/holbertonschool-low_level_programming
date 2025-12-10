@@ -16,5 +16,6 @@ int _atoi(char *s); /* converts string to an integer */
 char *_strcat(char *dest, char *src); /* cocatenates two strings */
 char *_strncat(char *dest, char *src, int n); /* concatanetes two strings till n character */
 char *_strncpy(char *dest, char *src, int n); /* the equal to strncpy */
+int _strcmp(char *s1, char *s2); /* compares strings */
 
 #endif
