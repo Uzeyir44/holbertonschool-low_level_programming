@@ -15,5 +15,6 @@ char *_strcpy(char *dest, char *src); /* copies the value of one string to anoth
 int _atoi(char *s); /* converts string to an integer */
 char *_strcat(char *dest, char *src); /* cocatenates two strings */
 char *_strncat(char *dest, char *src, int n); /* concatanetes two strings till n character */
+char *_strncpy(char *dest, char *src, int n); /* the equal to strncpy */
 
 #endif
