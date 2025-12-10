@@ -13,5 +13,6 @@ void puts_half(char *str); /* prints the string from the middle */
 void print_array(int *a, int n); /* prints the n numbers of an array */
 char *_strcpy(char *dest, char *src); /* copies the value of one string to another */
 int _atoi(char *s); /* converts string to an integer */
+char *_strcat(char *dest, char *src); /* cocatenates two strings */
 
 #endif
