@@ -16,6 +16,8 @@ char *cap_string(char *p)
         {
             p[i] = p[i] - 32;
         }
+
+        i++;
     }
 
     return (p);
