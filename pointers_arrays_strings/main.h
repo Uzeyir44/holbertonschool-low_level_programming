@@ -19,5 +19,6 @@ char *_strncpy(char *dest, char *src, int n); /* the equal to strncpy */
 int _strcmp(char *s1, char *s2); /* compares strings */
 void reverse_array(int *a, int n); /* reverse array */
 char *string_toupper(char *); /* makes string elements uppercase */
+char *cap_string(char *); /* capitalizes the words */
 
 #endif
