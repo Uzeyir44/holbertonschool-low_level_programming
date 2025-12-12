@@ -3,11 +3,12 @@
 char *_memset(char *s, char b, unsigned int n)
 {
     unsigned int i;
+    char *point = s;
 
     for (i = 0; i < n; i++)
     {
-        *s = b;
-        s++;
+        *point = b;
+        point++;
     }
 
     return (s);
