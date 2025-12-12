@@ -11,9 +11,9 @@ char *leet(char *p)
     {
         for (j = 0; j < 10; j++)
         {
-            if (p[j] == a[j])
+            if (p[i] == a[j])
             {
-                p[j] = b[j];
+                p[i] = b[j];
                 break;
             }
         }
