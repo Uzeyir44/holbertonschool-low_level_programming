@@ -23,5 +23,6 @@ char *cap_string(char *); /* capitalizes the words */
 char *leet(char *); /* encode string */
 char *_memset(char *s, char b, unsigned int n); /* fills n memory slots with b*/
 char *_memcpy(char *dest, char *src, unsigned int n); /* copies n bytes from src to dest*/
+char *_strchr(char *s, char c); /* finds character c in s */
 
 #endif
