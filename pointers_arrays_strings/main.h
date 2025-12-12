@@ -21,5 +21,6 @@ void reverse_array(int *a, int n); /* reverse array */
 char *string_toupper(char *); /* makes string elements uppercase */
 char *cap_string(char *); /* capitalizes the words */
 char *leet(char *); /* encode string */
+char *_memset(char *s, char b, unsigned int n); /* fills n memory slots with b*/
 
 #endif
