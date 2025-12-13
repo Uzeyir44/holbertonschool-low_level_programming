@@ -26,5 +26,6 @@ char *_memcpy(char *dest, char *src, unsigned int n); /* copies n bytes from src
 char *_strchr(char *s, char c); /* finds character c in s */
 unsigned int _strspn(char *s, char *accept); /* returns numbers of initial bytes from s which are similar to accept */
 char *_strpbrk(char *s, char *accept); /* returns pointer to the first similar byte in accept */
+char *_strstr(char *haystack, char *needle); /* finds if string haystack contains the string needle */
 
 #endif
