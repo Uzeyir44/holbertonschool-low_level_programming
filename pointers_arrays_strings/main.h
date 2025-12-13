@@ -28,5 +28,6 @@ unsigned int _strspn(char *s, char *accept); /* returns numbers of initial bytes
 char *_strpbrk(char *s, char *accept); /* returns pointer to the first similar byte in accept */
 char *_strstr(char *haystack, char *needle); /* finds if string haystack contains the string needle */
 void print_chessboard(char (*a)[8]); /* prints the array */
+void print_diagsums(int *a, int size); /* prints the sum of array's diagonals */
 
 #endif
