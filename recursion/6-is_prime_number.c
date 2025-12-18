@@ -4,7 +4,7 @@ int find_prime(int n, int divide, int count);
 
 int is_prime_number(int n)
 {
-    if (find_prime(n, 2, 1) > 2)
+    if ( n <= 1 || find_prime(n, 2, 1) > 2)
     {
         return (0);
     }
@@ -16,10 +16,6 @@ int is_prime_number(int n)
 
 int find_prime(int n, int divide, int count)
 {
-    if (n <= 1)
-    {
-        return (3);
-    }
     if (divide == n)
     {
         return (count + 1);
