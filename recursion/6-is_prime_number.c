@@ -16,6 +16,10 @@ int is_prime_number(int n)
 
 int find_prime(int n, int divide, int count)
 {
+    if (n <= 1)
+    {
+        return (0);
+    }
     if (divide == n)
     {
         return (count + 1);
