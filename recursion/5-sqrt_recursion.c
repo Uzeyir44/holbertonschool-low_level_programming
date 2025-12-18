@@ -19,6 +19,8 @@ int work(int n, int c)
 
 int _sqrt_recursion(int n)
 {
+    int a;
+    
     a = work(n, 0);
     return (a);
 }
