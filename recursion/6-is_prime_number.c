@@ -18,7 +18,7 @@ int find_prime(int n, int divide, int count)
 {
     if (n <= 1)
     {
-        return (2);
+        return (3);
     }
     if (divide == n)
     {
