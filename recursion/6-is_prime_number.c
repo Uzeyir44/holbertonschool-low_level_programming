@@ -6,11 +6,11 @@ int is_prime_number(int n)
 {
     if (find_prime(n, 2, 1) > 2)
     {
-        return (1);
+        return (0);
     }
     else
     {
-        return (0);
+        return (1);
     }
 }
 
