@@ -1,5 +1,6 @@
 #include "main.h"
 #include <stdio.h>
+#include <stdlib.h>
 
 int main(int argc, char *argv[])
 {
@@ -27,7 +28,7 @@ int main(int argc, char *argv[])
             }
         }
 
-        sum += argv[i];
+        sum += atoi(argv[i]);
     }
 
     printf("%d\n", sum);
