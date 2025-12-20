@@ -3,7 +3,8 @@
 
 int main(int argc, char *argv[])
 {
-    int i;
+    int a;
+    int b;
     
     if (argc == 1)
     {
@@ -12,9 +13,10 @@ int main(int argc, char *argv[])
         return (1);
     }
 
-    i = argv[1] * argv[2];
+    a = argv[1] - '0';
+    b = argv[2] - '0';
 
-    printf("%d\n", i);
+    printf("%d\n", a*b);
 
     return (0);
 }
