@@ -1,9 +1,17 @@
 #include "main.h"
 #include <stdlib.h>
 
+/**
+ * string_nconcat - concatenates two strings
+ * @s1: first string
+ * @s2: second string
+ * @n: number of bytes from s2 to concatenate
+ *
+ * Return: pointer to concatenated string or NULL on failure
+ */
 char *string_nconcat(char *s1, char *s2, unsigned int n)
 {
-    unsigned int size1 = 0;
+	unsigned int size1 = 0;
 	unsigned int size2 = 0;
 	unsigned int i, j;
 	char *pointer;
@@ -20,10 +28,10 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 	while (s2[size2] != '\0')
 		size2++;
 
-    if (size2 > n)
-    {
-        size2 = n;
-    }
+	if (size2 > n)
+	{
+		size2 = n;
+	}
 
 	pointer = malloc((size1 + size2 + 1) * sizeof(char));
 
