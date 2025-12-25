@@ -6,7 +6,7 @@ char *_strdup(char *str)
 {
     char *point;
     int i;
-    int size;
+    int size = 0;
 
     if (str == NULL)
     {
@@ -27,7 +27,7 @@ char *_strdup(char *str)
         return (NULL);
     }
 
-    for (i = 0; i < size - 1; i++)
+    for (i = 0; i < size; i++)
     {
         point[i] = *(str + i);
     }
