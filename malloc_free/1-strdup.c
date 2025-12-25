@@ -18,8 +18,6 @@ char *_strdup(char *str)
         size++;
     }
 
-    size++;
-
     point = malloc(size * sizeof(char));
 
     if (!point)
