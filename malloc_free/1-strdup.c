@@ -18,7 +18,7 @@ char *_strdup(char *str)
         size++;
     }
 
-    size++:
+    size++;
 
     point = malloc(size * sizeof(char));
 
