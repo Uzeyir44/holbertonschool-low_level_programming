@@ -1,8 +1,10 @@
 #include "main.h"
+#include <stdlib.h>
+#include <stdio.h>
 
 char *create_array(unsigned int size, char c)
 {
-    int i;
+    unsigned int i;
     char arr[] = malloc(size);
 
     if (size <= 0)
