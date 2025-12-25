@@ -1,0 +1,1 @@
+There will be programs that use malloc and free functions in their logic 
