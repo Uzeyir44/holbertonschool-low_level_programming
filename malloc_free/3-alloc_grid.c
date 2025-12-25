@@ -15,6 +15,7 @@ int **alloc_grid(int width, int height)
 
     if (!pointer)
     {
+        free(pointer);
         return (NULL);
     }
 
@@ -24,6 +25,13 @@ int **alloc_grid(int width, int height)
 
         if (!pointer[i])
         {
+            for (j = 0; j < i; j++)
+            {
+                free(pointer[j]);
+            }
+
+            free(pointer);
+
             return(NULL);
         }
 
