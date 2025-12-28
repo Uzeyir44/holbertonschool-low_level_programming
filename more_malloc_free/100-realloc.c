@@ -9,35 +9,35 @@
  *
  * Return: pointer to new memory or NULL
  */
-void *_realloc(void *ptr, unsigned int old_size, unsigned int new_size)
+void	*_realloc(void *ptr, unsigned int old_size, unsigned int new_size)
 {
-    void *point;
-    unsigned int i;
+	void	*point;
+	unsigned int	i;
 
-    if (!new_size && ptr)
-    {
-        free(ptr);
-        return (NULL);
-    }
+	if (!new_size && ptr)
+	{
+		free(ptr);
+		return (NULL);
+	}
 
-    if (!ptr)
-    {
-        ptr = malloc(new_size);
-        if (!ptr)
-            return (NULL);
-        return (ptr);
-    }
+	if (!ptr)
+	{
+		ptr = malloc(new_size);
+		if (!ptr)
+			return (NULL);
+		return (ptr);
+	}
 
-    if (new_size == old_size)
-        return (ptr);
+	if (new_size == old_size)
+		return (ptr);
 
-    point = malloc(new_size);
-    if (!point)
-        return (NULL);
+	point = malloc(new_size);
+	if (!point)
+		return (NULL);
 
-    for (i = 0; i < old_size; i++)
-        ((char *)point)[i] = ((char *)ptr)[i];
+	for (i = 0; i < old_size; i++)
+		((char *)point)[i] = ((char *)ptr)[i];
 
-    free(ptr);
-    return (point);
+	free(ptr);
+	return (point);
 }
