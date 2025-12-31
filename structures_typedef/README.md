@@ -1,0 +1,1 @@
+There will be code related to the usage of structures and typedef
