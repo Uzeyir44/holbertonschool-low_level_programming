@@ -1,58 +1,74 @@
 #include "dog.h"
 #include <stdlib.h>
 
+/**
+ * _strlen - returns the length of a string
+ * @s: string to measure
+ *
+ * Return: length of string
+ */
+int _strlen(char *s)
+{
+	int i;
+
+	for (i = 0; *(s + i) != '\0'; i++)
+		;
+	return (i);
+}
+
+/**
+ * _strcpy - copies a string
+ * @dest: destination buffer
+ * @src: source string
+ *
+ * Return: nothing
+ */
+void _strcpy(char *dest, char *src)
+{
+	int i;
+
+	for (i = 0; *(src + i) != '\0'; i++)
+		dest[i] = src[i];
+	dest[i] = '\0';
+}
+
+/**
+ * new_dog - creates a new dog
+ * @name: dog's name
+ * @age: dog's age
+ * @owner: dog's owner
+ *
+ * Return: pointer to new dog, or NULL on failure
+ */
 dog_t *new_dog(char *name, float age, char *owner)
 {
-	int i, j;
-	char *point_name;
-	char *point_owner;
-	dog_t *dog = malloc(sizeof(dog_t));
+	dog_t *dog;
+	int name_len, owner_len;
 
+	dog = malloc(sizeof(dog_t));
 	if (!dog)
-	{
 		return (NULL);
-	}
 
-	for (i = 0; *(name + i) != '\0'; i++)
-		;
-	for (j = 0; *(owner + j) != '\0'; j++)
-		;
+	name_len = _strlen(name);
+	owner_len = _strlen(owner);
 
-	dog->name = malloc(i + 1);
-	if (!(dog->name))
+	dog->name = malloc(name_len + 1);
+	if (!dog->name)
 	{
 		free(dog);
 		return (NULL);
 	}
 
-	point_name = dog->name;
-
-	for (i = 0; *(name + i) != '\0'; i++)
-	{
-		*point_name = name[i];
-		point_name++;
-	}
-
-	*point_name = '\0';
-
-	dog->owner = malloc(j + 1);
-	if (!(dog->owner))
+	dog->owner = malloc(owner_len + 1);
+	if (!dog->owner)
 	{
 		free(dog->name);
 		free(dog);
 		return (NULL);
 	}
 
-	point_owner = dog->owner;
-
-	for (j = 0; *(owner + j) != '\0'; j++)
-	{
-		*point_owner = owner[j];
-		point_owner++;
-	}
-
-	*point_owner = '\0';
-
+	_strcpy(dog->name, name);
+	_strcpy(dog->owner, owner);
 	dog->age = age;
 
 	return (dog);
