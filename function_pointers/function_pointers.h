@@ -8,5 +8,7 @@ void print_name(char *name, void (*f)(char *));
 #include <stddef.h>
 /* executes function for each element of array */
 void array_iterator(int *array, size_t size, void (*action)(int));
+/* function that searches for the integer */
+int int_index(int *array, int size, int (*cmp)(int));
 
 #endif
