@@ -9,8 +9,8 @@
  */
 typedef struct op
 {
-    char *op;
-    int (*f)(int a, int b);
+	char *op;
+	int (*f)(int a, int b);
 } op_t;
 /* returns the sum of integers */
 int op_add(int a, int b);
