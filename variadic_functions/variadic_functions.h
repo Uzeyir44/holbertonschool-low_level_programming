@@ -1,6 +1,7 @@
 #ifndef MAIN_H
 #define MAIN_H
 
+/* library stdarg.h */
 #include <stdarg.h>
 
 /* prototype for the provided function */
