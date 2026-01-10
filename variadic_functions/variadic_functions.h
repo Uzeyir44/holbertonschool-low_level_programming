@@ -7,5 +7,7 @@ int _putchar(char c);
 int sum_them_all(const unsigned int n, ...);
 /* prints given number with separator */
 void print_numbers(const char *separator, const unsigned int n, ...);
+/* prints strings */
+void print_strings(const char *separator, const unsigned int n, ...);
 
 #endif
