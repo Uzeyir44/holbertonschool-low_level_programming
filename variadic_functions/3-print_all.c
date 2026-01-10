@@ -15,12 +15,6 @@ void print_char(va_list args)
 void print_string(va_list args)
 {
     char *x = va_arg(args, char *);
-    if (!x)
-    {
-        printf("(nil)");
-        return;
-    }
-    
     printf("%s", x);
 }
 
