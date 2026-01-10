@@ -5,5 +5,7 @@
 int _putchar(char c);
 /* sums all the variables assigned to the function and returns its */
 int sum_them_all(const unsigned int n, ...);
+/* prints given number with separator */
+void print_numbers(const char *separator, const unsigned int n, ...);
 
 #endif
