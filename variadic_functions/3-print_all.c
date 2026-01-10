@@ -18,11 +18,10 @@ void print_string(va_list args)
     if (!x)
     {
         printf("(nil)");
+        return;
     }
-    else
-    {
-        printf("%s", x);
-    }
+    
+    printf("%s", x);
 }
 
 void print_float(va_list args)
