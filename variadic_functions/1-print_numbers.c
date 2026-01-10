@@ -4,7 +4,6 @@
 
 void print_numbers(const char *separator, const unsigned int n, ...)
 {
-    char c = '\0';
     va_list args;
     unsigned int i;
 
@@ -21,7 +20,7 @@ void print_numbers(const char *separator, const unsigned int n, ...)
     {
         for (i = 0; i < n - 1; i++)
         {
-            printf("%d%s", va_arg(args, int), *separator);
+            printf("%d%c", va_arg(args, int), *separator);
         }
 
         printf("%d", va_arg(args, int));
