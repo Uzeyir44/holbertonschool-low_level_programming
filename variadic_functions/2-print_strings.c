@@ -45,7 +45,7 @@ void print_strings(const char *separator, const unsigned int n, ...)
 			c = va_arg(args, char *);
             if (!c)
             {
-                printf("(nil)%s", separator);
+                printf("(nil)");
             }
             else
             {
