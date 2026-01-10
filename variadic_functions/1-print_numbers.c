@@ -3,37 +3,42 @@
 #include <stdarg.h>
 #include <stdlib.h>
 
+/**
+ * print_numbers - prints numbers separated by a string
+ * @separator: string to print between numbers
+ * @n: number of integers
+ */
 void print_numbers(const char *separator, const unsigned int n, ...)
 {
-    va_list args;
-    unsigned int i;
+	va_list args;
+	unsigned int i;
 
-    if (n != 0)
-    {
-        va_start(args, n);
+	if (n != 0)
+	{
+		va_start(args, n);
 
-        if (!separator)
-        {
-            for (i = 0; i < n; i++)
-            {
-                printf("%d", va_arg(args, int));
-            }
-        }
-        else
-        {
-            for (i = 0; i < n - 1; i++)
-            {
-                printf("%d%s", va_arg(args, int), separator);
-            }
+		if (!separator)
+		{
+			for (i = 0; i < n; i++)
+			{
+				printf("%d", va_arg(args, int));
+			}
+		}
+		else
+		{
+			for (i = 0; i < n - 1; i++)
+			{
+				printf("%d%s", va_arg(args, int), separator);
+			}
 
-            printf("%d", va_arg(args, int));
-        }
+			printf("%d", va_arg(args, int));
+		}
 
-        printf("\n");
-        va_end(args);
-    }
-    else
-    {
-        printf("\n");
-    }
+		printf("\n");
+		va_end(args);
+	}
+	else
+	{
+		printf("\n");
+	}
 }
