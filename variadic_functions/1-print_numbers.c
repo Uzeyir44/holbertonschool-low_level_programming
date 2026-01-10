@@ -4,7 +4,7 @@
 
 void print_numbers(const char *separator, const unsigned int n, ...)
 {
-    char c = '\0'
+    char c = '\0';
     va_list args;
     unsigned int i;
 
