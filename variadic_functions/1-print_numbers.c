@@ -1,11 +1,17 @@
 #include "variadic_functions.h"
 #include <stdio.h>
 #include <stdarg.h>
+#include <stdlib.h>
 
 void print_numbers(const char *separator, const unsigned int n, ...)
 {
     va_list args;
     unsigned int i;
+
+    if (n == 0)
+    {
+        exit();
+    }
 
     va_start(args, n);
 
