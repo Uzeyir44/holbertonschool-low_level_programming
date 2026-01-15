@@ -6,12 +6,7 @@
 /* Prototype for the provided function */
 int _putchar(char c);
 
-/**
- * struct list_s - singly linked list
- * @str: string
- * @len: length of the string
- * @next: pointer to the next node
- */
+/* structure for nodes */
 typedef struct list_s
 {
 	char *str;
