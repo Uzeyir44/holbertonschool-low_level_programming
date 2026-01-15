@@ -25,6 +25,8 @@ size_t print_list(const list_t *h);
 size_t list_len(const list_t *h);
 /* ads a new element in the begining */
 list_t *add_node(list_t **head, const char *str);
+/* returns the length of string */
+int _strlen(char *s);
 
 #endif /* MAIN_H */
 

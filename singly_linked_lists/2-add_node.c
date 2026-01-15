@@ -3,6 +3,19 @@
 #include <string.h>
 #include <stdlib.h>
 
+int _strlen(char *s)
+{
+	int i;
+
+	i = 0;
+	while (s[i] != '\0')
+	{
+		i++;
+	}
+
+	return (i);
+}
+
 list_t *add_node(list_t **head, const char *str)
 {
     list_t *temp;
@@ -15,7 +28,7 @@ list_t *add_node(list_t **head, const char *str)
             return (NULL);
         }
         (*head)->str = strdup(str);
-        (*head)->len = strlen(str);
+        (*head)->len = _strlen(str);
         (*head)->next = NULL;
         return (*head);
     }
@@ -27,7 +40,7 @@ list_t *add_node(list_t **head, const char *str)
     }
     temp->next = *head;
     temp->str = strdup(str);
-    temp->len = strlen(str);
+    temp->len = _strlen(str);
     *head = temp;
     return (*head);
 }
