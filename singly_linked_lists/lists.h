@@ -1,16 +1,25 @@
 #ifndef MAIN_H
 #define MAIN_H
 
-/* prototype for the provided function */
+#include <stddef.h>
+
+/* Prototype for the provided function */
 int _putchar(char c);
-/* structure of our list */
+
+/**
+ * struct list_s - singly linked list
+ * @str: string
+ * @len: length of the string
+ * @next: pointer to the next node
+ */
 typedef struct list_s
 {
-    char *str;
-    unsigned int len;
-    struct list_s *next;
+	char *str;
+	unsigned int len;
+	struct list_s *next;
 } list_t;
-/* it will print all the values of given list and return the number of nodes */
+
+/* Prints all the values of a list and returns the number of nodes */
 size_t print_list(const list_t *h);
 
-#endif
+#endif /* MAIN_H */
