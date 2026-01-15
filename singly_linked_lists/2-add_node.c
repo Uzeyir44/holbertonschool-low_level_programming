@@ -3,7 +3,7 @@
 #include <string.h>
 #include <stdlib.h>
 
-int _strlen(char *s)
+int _strlen(const char *s)
 {
 	int i;
 
