@@ -3,14 +3,14 @@
 
 size_t print_list(const list_t *h)
 {
-    const list_t *temp1 = h;
-    const list_t *temp2 = h->next;
-    size_t node = 1;
-
     if (!h)
     {
         return (0);
     }
+    
+    const list_t *temp1 = h;
+    const list_t *temp2 = h->next;
+    size_t node = 1;
 
     while (temp2 != NULL)
     {
