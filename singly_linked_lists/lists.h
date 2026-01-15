@@ -23,10 +23,12 @@ typedef struct list_s
 size_t print_list(const list_t *h);
 /* returns the number of nodes */
 size_t list_len(const list_t *h);
-/* ads a new element in the begining */
+/* adds a new element in the begining */
 list_t *add_node(list_t **head, const char *str);
 /* returns the length of string */
 int _strlen(const char *s);
+/* adds new node at the end of list */
+list_t *add_node_end(list_t **head, const char *str);
 
 #endif /* MAIN_H */
 
