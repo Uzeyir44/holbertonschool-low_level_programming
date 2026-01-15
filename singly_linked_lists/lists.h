@@ -21,6 +21,8 @@ typedef struct list_s
 
 /* Prints all the values of a list and returns the number of nodes */
 size_t print_list(const list_t *h);
+/* returns the number of nodes */
+size_t list_len(const list_t *h);
 
 #endif /* MAIN_H */
 
