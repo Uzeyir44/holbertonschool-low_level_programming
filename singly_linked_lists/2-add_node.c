@@ -1,19 +1,33 @@
 #include "lists.h"
 #include <stdio.h>
 #include <string.h>
+#include <stdlib.h>
 
 list_t *add_node(list_t **head, const char *str)
 {
-    if (!head)
+    list_t *temp;
+    
+    if (!(*head))
     {
-        head = malloc(sizeof(list_t));
-        head->str = strdup(str);
-        return (head);
+        *head = malloc(sizeof(list_t));
+        if (!(*head))
+        {
+            return (NULL);
+        }
+        (*head)->str = strdup(str);
+        (*head)->len = strlen(str);
+        (*head)->next = NULL;
+        return (*head);
     }
 
-    list_t *temp = malloc(sizeof(list_t));
-    temp->next = head;
+    temp = malloc(sizeof(list_t));
+    if (!temp)
+    {
+        return (NULL);
+    }
+    temp->next = *head;
     temp->str = strdup(str);
-    head = temp;
-    return (head);
+    temp->len = strlen(str);
+    *head = temp;
+    return (*head);
 }
