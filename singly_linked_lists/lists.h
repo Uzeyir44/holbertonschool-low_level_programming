@@ -6,7 +6,12 @@
 /* Prototype for the provided function */
 int _putchar(char c);
 
-/* structure for nodes */
+/**
+ * struct list_s - Singly linked list node
+ * @str: String stored in the node
+ * @len: Length of the string
+ * @next: Pointer to the next node
+ */
 typedef struct list_s
 {
 	char *str;
@@ -18,3 +23,4 @@ typedef struct list_s
 size_t print_list(const list_t *h);
 
 #endif /* MAIN_H */
+
