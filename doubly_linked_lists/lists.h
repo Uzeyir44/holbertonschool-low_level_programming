@@ -25,5 +25,7 @@ typedef struct dlistint_s
 size_t print_dlistint(const dlistint_t *h);
 /* dlistint_len - returns the number of elements in a dlistint_t list */
 size_t dlistint_len(const dlistint_t *h);
+/* adds new element at to the begining of the list */
+dlistint_t *add_dnodeint(dlistint_t **head, const int n);
 
 #endif
