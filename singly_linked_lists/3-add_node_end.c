@@ -22,32 +22,45 @@ int _strlen(const char *s)
 	return (i);
 }
 
+/**
+ * check_malloc - allocates memory for a list_t node
+ * @N: double pointer to node
+ *
+ * Return: pointer to allocated node or NULL
+ */
 list_t *check_malloc(list_t **N)
 {
-    *N = malloc(sizeof(list_t));
+	*N = malloc(sizeof(list_t));
 
-    if (!(*N))
-    {
-        return (NULL);
-    }
+	if (!(*N))
+	{
+		return (NULL);
+	}
 
-    return (*N);
+	return (*N);
 }
 
+/**
+ * check_strdup - duplicates string into node
+ * @M: double pointer to node
+ * @str: string to duplicate
+ *
+ * Return: pointer to node or NULL
+ */
 list_t *check_strdup(list_t **M, const char *str)
 {
-    (*M)->str = strdup(str);
+	(*M)->str = strdup(str);
 
-    if (!((*M)->str))
-    {
-        free(*M);
-        return (NULL);
-    }
+	if (!((*M)->str))
+	{
+		free(*M);
+		return (NULL);
+	}
 
-    (*M)->len = _strlen(str);
-    (*M)->next = NULL;
+	(*M)->len = _strlen(str);
+	(*M)->next = NULL;
 
-    return (*M);
+	return (*M);
 }
 
 /**
@@ -65,27 +78,27 @@ list_t *add_node_end(list_t **head, const char *str)
 	if (!(*head))
 	{
 		if (check_malloc(head) == NULL)
-        {
-            return (NULL);
-        }
+		{
+			return (NULL);
+		}
 
 		if (check_strdup(head, str) == NULL)
-        {
-            return (NULL);
-        }
+		{
+			return (NULL);
+		}
 
 		return (*head);
 	}
 
 	if (check_malloc(&temp) == NULL)
-    {
-        return (NULL);
-    }
+	{
+		return (NULL);
+	}
 
 	if (check_strdup(&temp, str) == NULL)
-    {
-        return (NULL);
-    }
+	{
+		return (NULL);
+	}
 
 	current = *head;
 
