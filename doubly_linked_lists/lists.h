@@ -13,18 +13,28 @@ int _putchar(char c);
  * @next: points to the next node
  *
  * Description: doubly linked list node structure
- * 
  */
 typedef struct dlistint_s
 {
-    int n;
-    struct dlistint_s *prev;
-    struct dlistint_s *next;
+	int n;
+	struct dlistint_s *prev;
+	struct dlistint_s *next;
 } dlistint_t;
 
-/* prints all the data in nodes and returns the number of nodes */
+/**
+ * print_dlistint - prints all the data in a dlistint_t list
+ * @h: pointer to the head of the list
+ *
+ * Return: number of nodes
+ */
 size_t print_dlistint(const dlistint_t *h);
-/* returns the number of elements in list */
+
+/**
+ * dlistint_len - returns the number of elements in a dlistint_t list
+ * @h: pointer to the head of the list
+ *
+ * Return: number of nodes
+ */
 size_t dlistint_len(const dlistint_t *h);
 
 #endif
