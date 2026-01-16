@@ -9,7 +9,8 @@
  *
  * Return: address of the new node, or NULL if it fails
  */
-dlistint_t *insert_dnodeint_at_index(dlistint_t **h, unsigned int idx, int n)
+dlistint_t *insert_dnodeint_at_index(dlistint_t **h,
+		unsigned int idx, int n)
 {
 	dlistint_t *temp1;
 	dlistint_t *temp_left = *h;
@@ -37,12 +38,16 @@ dlistint_t *insert_dnodeint_at_index(dlistint_t **h, unsigned int idx, int n)
 			return (temp1);
 		}
 
+		if (num == idx - 1 && temp_left->next == NULL)
+		{
+			free(temp1);
+			return (add_dnodeint_end(h, n));
+		}
+
 		temp_left = temp_left->next;
 		num++;
 	}
 
-    if (idx == num+1)
-        return (add_dnodeint_end(h, n));
-
+	free(temp1);
 	return (NULL);
 }
