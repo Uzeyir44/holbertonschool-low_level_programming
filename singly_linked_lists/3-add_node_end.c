@@ -3,6 +3,12 @@
 #include <stdlib.h>
 #include <string.h>
 
+/**
+ * _strlen - returns the length of a string
+ * @s: string
+ *
+ * Return: length of string
+ */
 int _strlen(const char *s)
 {
 	int i;
@@ -16,57 +22,63 @@ int _strlen(const char *s)
 	return (i);
 }
 
+/**
+ * add_node_end - adds a new node at the end of a list_t list
+ * @head: pointer to the head of the list
+ * @str: string to duplicate
+ *
+ * Return: address of the new element, or NULL if it failed
+ */
 list_t *add_node_end(list_t **head, const char *str)
 {
-    list_t *temp;
-    list_t *current;
-    
-    if (!(*head))
-    {
-        *head = malloc(sizeof(list_t));
-        if (!(*head))
-        {
-            free(*head);
-            return (NULL);
-        }
+	list_t *temp;
+	list_t *current;
 
-        (*head)->str = strdup(str);
-        if (!((*head)->str))
-        {
-            free((*head)->str);
-            free(*head);
-            return (NULL);
-        }
-        (*head)->len = _strlen(str);
-        (*head)->next = NULL;
-        return (*head);
-    }
+	if (!(*head))
+	{
+		*head = malloc(sizeof(list_t));
+		if (!(*head))
+		{
+			free(*head);
+			return (NULL);
+		}
 
-    temp = malloc(sizeof(list_t));
+		(*head)->str = strdup(str);
+		if (!((*head)->str))
+		{
+			free((*head)->str);
+			free(*head);
+			return (NULL);
+		}
+		(*head)->len = _strlen(str);
+		(*head)->next = NULL;
+		return (*head);
+	}
 
-    if (!temp)
-    {
-        free(temp);
-        return (NULL);
-    }
+	temp = malloc(sizeof(list_t));
+	if (!temp)
+	{
+		free(temp);
+		return (NULL);
+	}
 
-    temp->str = strdup(str);
-    if (!(temp->str))
-    {
-        free(temp->str);
-        free(temp);
-        return (NULL);
-    }
+	temp->str = strdup(str);
+	if (!(temp->str))
+	{
+		free(temp->str);
+		free(temp);
+		return (NULL);
+	}
 
-    temp->len = _strlen(str);
-    temp->next = NULL;
-    current = *head;
+	temp->len = _strlen(str);
+	temp->next = NULL;
+	current = *head;
 
-    while (current->next != NULL)
-    {
-        current = current->next;
-    }
+	while (current->next != NULL)
+	{
+		current = current->next;
+	}
 
-    current->next = temp;
-    return (temp);
+	current->next = temp;
+	return (temp);
 }
