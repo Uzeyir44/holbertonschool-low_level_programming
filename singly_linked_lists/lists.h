@@ -29,6 +29,10 @@ list_t *add_node(list_t **head, const char *str);
 int _strlen(const char *s);
 /* adds new node at the end of list */
 list_t *add_node_end(list_t **head, const char *str);
+/* checks if the argument will be null after malloc */
+list_t *check_malloc(list_t **N);
+/* checks if null after strdup otherwise fills the struct */
+list_t *check_strdup(list_t **M, const char *str);
 
 #endif /* MAIN_H */
 

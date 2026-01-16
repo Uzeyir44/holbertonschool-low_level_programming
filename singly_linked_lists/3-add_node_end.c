@@ -22,6 +22,34 @@ int _strlen(const char *s)
 	return (i);
 }
 
+list_t *check_malloc(list_t **N)
+{
+    *N = malloc(sizeof(list_t));
+
+    if (!(*N))
+    {
+        return (NULL);
+    }
+
+    return (*N);
+}
+
+list_t *check_strdup(list_t **M, const char *str)
+{
+    (*M)->str = strdup(str);
+
+    if (!((*M)->str))
+    {
+        free(*M);
+        return (NULL);
+    }
+
+    (*M)->len = _strlen(str);
+    (*M)->next = NULL;
+
+    return (*M);
+}
+
 /**
  * add_node_end - adds a new node at the end of a list_t list
  * @head: pointer to the head of the list
@@ -36,42 +64,29 @@ list_t *add_node_end(list_t **head, const char *str)
 
 	if (!(*head))
 	{
-		*head = malloc(sizeof(list_t));
-		if (!(*head))
-		{
-			free(*head);
-			return (NULL);
-		}
+		if (check_malloc(head) == NULL)
+        {
+            return (NULL);
+        }
 
-		(*head)->str = strdup(str);
-		if (!((*head)->str))
-		{
-			free((*head)->str);
-			free(*head);
-			return (NULL);
-		}
-		(*head)->len = _strlen(str);
-		(*head)->next = NULL;
+		if (check_strdup(head, str) == NULL)
+        {
+            return (NULL);
+        }
+
 		return (*head);
 	}
 
-	temp = malloc(sizeof(list_t));
-	if (!temp)
-	{
-		free(temp);
-		return (NULL);
-	}
+	if (check_malloc(&temp) == NULL)
+    {
+        return (NULL);
+    }
 
-	temp->str = strdup(str);
-	if (!(temp->str))
-	{
-		free(temp->str);
-		free(temp);
-		return (NULL);
-	}
+	if (check_strdup(&temp, str) == NULL)
+    {
+        return (NULL);
+    }
 
-	temp->len = _strlen(str);
-	temp->next = NULL;
 	current = *head;
 
 	while (current->next != NULL)
