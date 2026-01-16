@@ -33,5 +33,7 @@ dlistint_t *add_dnodeint_end(dlistint_t **head, const int n);
 void free_dlistint(dlistint_t *head);
 /* returns the element of the list by index */
 dlistint_t *get_dnodeint_at_index(dlistint_t *head, unsigned int index);
+/* returns the sum of all elements in the list */
+int sum_dlistint(dlistint_t *head);
 
 #endif
