@@ -4,7 +4,7 @@
 dlistint_t *insert_dnodeint_at_index(dlistint_t **h, unsigned int idx, int n)
 {
     dlistint_t *temp1 = malloc(sizeof(dlistint_t));
-    dlistint_t *temp_left = *head;
+    dlistint_t *temp_left = *h;
     dlistint_t *temp_right;
     unsigned int num = 0;
 
