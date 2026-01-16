@@ -1,0 +1,1 @@
+There will be more advanced tasks on linked lists specifically focusing on doubly linked lists.
