@@ -20,8 +20,10 @@ typedef struct dlistint_s
 	struct dlistint_s *prev;
 	struct dlistint_s *next;
 } dlistint_t;
+
 /* print_dlistint - prints all the data in a dlistint_t list */
 size_t print_dlistint(const dlistint_t *h);
-size_t dlistint_len(const dlistint_t *h); /* dlistint_len - returns the number of elements in a dlistint_t list */
+/* dlistint_len - returns the number of elements in a dlistint_t list */
+size_t dlistint_len(const dlistint_t *h);
 
 #endif
