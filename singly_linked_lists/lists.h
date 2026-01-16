@@ -33,6 +33,8 @@ list_t *add_node_end(list_t **head, const char *str);
 list_t *check_malloc(list_t **N);
 /* checks if null after strdup otherwise fills the struct */
 list_t *check_strdup(list_t **M, const char *str);
+/* frees all the data inside linked list and the list itself */
+void free_list(list_t *head);
 
 #endif /* MAIN_H */
 
