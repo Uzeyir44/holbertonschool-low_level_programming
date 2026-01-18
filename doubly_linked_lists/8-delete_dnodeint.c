@@ -1,7 +1,7 @@
 #include "lists.h"
 #include <stdlib.h>
 
-void del_first_element(dlistint_t **head, dlistint_t **main_n, dlistint_t **n_right)
+void del_first_element(dlistint_t **head, dlistint_t **n_main, dlistint_t **n_right)
 {
     *n_right = (*n_main)->next;
     *head = *n_right;
@@ -9,7 +9,7 @@ void del_first_element(dlistint_t **head, dlistint_t **main_n, dlistint_t **n_ri
     free(*n_main);
 }
 
-void del_last_element(dlistint_t **main_n, dlistint_t **n_left)
+void del_last_element(dlistint_t **n_main, dlistint_t **n_left)
 {
     *n_left = (*n_main)->prev;
     (*n_left)->next = NULL;
