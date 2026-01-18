@@ -39,5 +39,9 @@ int sum_dlistint(dlistint_t *head);
 dlistint_t *insert_dnodeint_at_index(dlistint_t **h, unsigned int idx, int n);
 /* deletes element of the list by index */
 int delete_dnodeint_at_index(dlistint_t **head, unsigned int index);
+/* deletes the first element of the list */
+void del_first_element(dlistint_t **head, dlistint_t **main_n, dlistint_t **n_right);
+/* deletes the last element of the list */
+void del_last_element(dlistint_t **main_n, dlistint_t **n_left);
 
 #endif
