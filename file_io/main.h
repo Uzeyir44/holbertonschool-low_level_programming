@@ -1,6 +1,8 @@
 #ifndef MAIN_H
 #define MAIN_H
 
+#include <stddef.h>
+
 /* prototype for the provided function */
 int _putchar(char c);
 /* reads and writes the data in stdout */
