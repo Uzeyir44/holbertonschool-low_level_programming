@@ -12,5 +12,7 @@ ssize_t read_textfile(const char *filename, size_t letters);
 int create_file(const char *filename, char *text_content);
 /* returns the length of string */
 int len(char *text);
+/* adds data to the end of the file if it exists */
+int append_text_to_file(const char *filename, char *text_content);
 
 #endif
