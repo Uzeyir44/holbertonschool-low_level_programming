@@ -67,7 +67,7 @@ void cp(int argc, char **argv)
     fd1 = open(argv[1], O_RDONLY);
     file_from_open(argv[1], fd1);
 
-    fd2 = open(argv[2], O_RDWR | O_CREAT | O_TRUNC, 0664);
+    fd2 = open(argv[2], O_WRONLY | O_CREAT | O_TRUNC, 0664);
     file_to_open(argv[2], fd2);
 
     while ((read1 = read(fd1, buf, 1024)) > 0)
