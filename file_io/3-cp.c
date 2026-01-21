@@ -8,7 +8,9 @@ void file_from_open(char *filename, int checker)
 {
     if (checker == -1)
     {
-        dprintf(2, "Error: Can't read from file %s\n", filename);
+        write(2, "Error: Can't read from file ", 28);
+		write(2, filename, len(filename));
+		write(2, "\n", 1);
         exit(98);
     }
 }
