@@ -82,3 +82,9 @@ void cp(int argc, char **argv)
     close_file = close(fd2);
     close_checker(fd2, close_file);
 }
+
+int main(int argc, char **argv)
+{
+	cp(argc, argv);
+	return (0);
+}
