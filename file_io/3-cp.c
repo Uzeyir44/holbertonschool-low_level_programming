@@ -4,6 +4,16 @@
 #include <stdlib.h>
 #include <stdio.h>
 
+int len(char *text)
+{
+	int i;
+
+	for (i = 0; text[i] != '\0'; i++)
+		;
+
+	return (i);
+}
+
 void file_from_open(char *filename, int checker)
 {
     if (checker == -1)
