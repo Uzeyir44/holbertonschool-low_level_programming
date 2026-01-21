@@ -70,11 +70,14 @@ void cp(int argc, char **argv)
     fd2 = open(argv[2], O_RDWR | O_CREAT | O_TRUNC, 0664);
     file_to_open(argv[2], fd2);
 
-    read1 = read(fd1, buf, 1024);
+    while ((read1 = read(fd1, buf, 1024)) > 0)
+    {
+	    write2 = write(fd2, buf, read1);
+	    file_to_write(argv[2], write2);
+    }
+
     file_from_read(argv[1], read1);
-    
-    write2 = write(fd2, buf, read1);
-    file_to_write(argv[2], write2);
+
 
     close_file = close(fd1);
     close_checker(fd1, close_file);
