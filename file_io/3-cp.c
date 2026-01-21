@@ -9,7 +9,6 @@ void file_from_open(char *filename, int checker)
     if (checker == -1)
     {
         dprintf(2, "Error: Can't read from file %s\n", filename);
-        fsync(2);
         exit(98);
     }
 }
@@ -19,7 +18,6 @@ void file_from_read(char *filename, ssize_t checker)
     if (checker == -1)
     {
         dprintf(2, "Error: Can't read from file %s\n", filename);
-        fsync(2);
         exit(98);
     }
 }
@@ -29,7 +27,6 @@ void file_to_open(char *filename, int checker)
     if (checker == -1)
     {
         dprintf(2, "Error: Can't write to %s\n", filename);
-        fsync(2);
         exit(99);
     }
 }
@@ -39,7 +36,6 @@ void file_to_write(char *filename, ssize_t checker)
     if (checker == -1)
     {
         dprintf(2, "Error: Can't write to %s\n", filename);
-        fsync(2);
         exit(99);
     }
 }
@@ -49,7 +45,6 @@ void close_checker(int descrip, int close_value)
     if (close_value == -1)
     {
         dprintf(2, "Error: Can't close fd %d\n", descrip);
-        fsync(2);
         exit(100);
     }
 }
