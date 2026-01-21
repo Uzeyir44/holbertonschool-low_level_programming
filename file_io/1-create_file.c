@@ -12,7 +12,8 @@ int len(char *text)
 {
 	int i;
 
-	for (i = 0; text[i] != '\0'; i++);
+	for (i = 0; text[i] != '\0'; i++)
+		;
 
 	return (i);
 }
