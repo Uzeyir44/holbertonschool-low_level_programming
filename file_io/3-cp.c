@@ -2,6 +2,7 @@
 #include <unistd.h>
 #include <fcntl.h>
 #include <stdlib.h>
+#include <stdio.h>
 
 void file_from_open(char *filename, int checker)
 {
@@ -73,7 +74,7 @@ void cp(int argc, char **argv)
     file_from_read(argv[1], read1);
     
     write2 = write(fd2, buf, read1);
-    file_to_write(argv[2], write1);
+    file_to_write(argv[2], write2);
 
     close_file = close(fd1);
     close_checker(fd1, close_file);
