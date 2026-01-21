@@ -2,6 +2,15 @@
 #include <unistd.h>
 #include <fcntl.h>
 
+int len(char *text)
+{
+    int i;
+
+    for (i = 0; text[i] != '\0'; i++);
+
+    return (i);
+}
+
 int create_file(const char *filename, char *text_content)
 {
     int fd;
@@ -20,7 +29,7 @@ int create_file(const char *filename, char *text_content)
     }
     else
     {
-        write(fd, text_content, 1);
+        write(fd, text_content, len(text_content));
         return (1);
     }
 }
