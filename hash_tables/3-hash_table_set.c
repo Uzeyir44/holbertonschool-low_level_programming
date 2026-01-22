@@ -28,10 +28,9 @@ int hash_table_set(hash_table_t *ht, const char *key, const char *value)
         return (0);
     }
 
-    if (ht->array[index] != NULL && ht->array[index]->key == tmp->key)
+    if (ht->array[index] != NULL && strncmp(ht->array[index]->key, tmp->key) == 0)
     {
-        tmp->next = NULL;
-        ht->array[index] = tmp;
+        ht->array[index]->value = strdup(value);
     }
     else
     {
