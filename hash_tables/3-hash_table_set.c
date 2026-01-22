@@ -2,6 +2,25 @@
 #include <stdlib.h>
 #include <string.h>
 
+int equal_key(hash_node_t node, const char *key, const char *value)
+{
+    while (node)
+    {
+        if (strcmp(node->key, key) == 0)
+        {
+            free(node->value);
+            node->value = strdup(value);
+            if (node->value == NULL)
+                return (0);
+            return (1);
+        }
+
+        node = node->next;
+    }
+
+    return (-1);
+}
+
 /**
  * hash_table_set - Adds or updates an element in the hash table
  * @ht: The hash table
@@ -21,21 +40,9 @@ int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 	index = key_index((const unsigned char *)key, ht->size);
 	node = ht->array[index];
 
-	/* Check if key already exists */
-	while (node)
-	{
-		if (strcmp(node->key, key) == 0)
-		{
-			free(node->value);
-			node->value = strdup(value);
-			if (!node->value)
-				return (0);
-			return (1);
-		}
-		node = node->next;
-	}
+	if (equal_key(node, key, value) == 1)
+        return (1);
 
-	/* Key does not exist: create new node */
 	tmp = malloc(sizeof(hash_node_t));
 	if (!tmp)
 		return (0);
@@ -55,7 +62,6 @@ int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 		return (0);
 	}
 
-	/* Insert at beginning (chaining) */
 	tmp->next = ht->array[index];
 	ht->array[index] = tmp;
 
