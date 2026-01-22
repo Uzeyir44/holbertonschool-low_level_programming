@@ -2,7 +2,7 @@
 #include <stdlib.h>
 #include <string.h>
 
-int equal_key(hash_node_t node, const char *key, const char *value)
+int equal_key(hash_node_t *node, const char *key, const char *value)
 {
     while (node)
     {
