@@ -38,5 +38,7 @@ unsigned long int key_index(const unsigned char *key, unsigned long int size);
 int hash_table_set(hash_table_t *ht, const char *key, const char *value);
 /* if keys equal changes the value to the new one */
 int equal_key(hash_node_t *node, const char *key, const char *value);
+/* returns the value associated with the key */
+char *hash_table_get(const hash_table_t *ht, const char *key);
 
 #endif /* HASH_TABLES_H */
