@@ -8,10 +8,10 @@ void hash_table_print(const hash_table_t *ht)
     int comma = 0;
     hash_node_t *node;
 
-    printf("{");
-
     if (ht != NULL)
     {
+        printf("{");
+
         for (i = 0; i < ht->size; i++)
         {
             node = ht->array[i];
@@ -25,7 +25,7 @@ void hash_table_print(const hash_table_t *ht)
                 comma++;
             }
         }
-    }
 
-    printf("}\n");
+        printf("}\n");
+    }
 }
