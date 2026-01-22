@@ -40,5 +40,7 @@ int hash_table_set(hash_table_t *ht, const char *key, const char *value);
 int equal_key(hash_node_t *node, const char *key, const char *value);
 /* returns the value associated with the key */
 char *hash_table_get(const hash_table_t *ht, const char *key);
+/* prints the hash table */
+void hash_table_print(const hash_table_t *ht);
 
 #endif /* HASH_TABLES_H */
