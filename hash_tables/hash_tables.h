@@ -42,5 +42,7 @@ int equal_key(hash_node_t *node, const char *key, const char *value);
 char *hash_table_get(const hash_table_t *ht, const char *key);
 /* prints the hash table */
 void hash_table_print(const hash_table_t *ht);
+/* deletes the whole hash table */
+void hash_table_delete(hash_table_t *ht);
 
 #endif /* HASH_TABLES_H */
