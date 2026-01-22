@@ -33,5 +33,6 @@ hash_table_t *hash_table_create(unsigned long int size);
 /* makes hashing using djb2 algorithm */
 unsigned long int hash_djb2(const unsigned char *str);
 /* returns the index for the key */
+unsigned long int key_index(const unsigned char *key, unsigned long int size);
 
 #endif /* HASH_TABLES_H */
