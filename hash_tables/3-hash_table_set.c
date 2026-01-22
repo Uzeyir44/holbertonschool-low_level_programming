@@ -28,8 +28,16 @@ int hash_table_set(hash_table_t *ht, const char *key, const char *value)
         return (0);
     }
 
-    tmp->next = ht->array[index];
-    ht->array[index] = tmp;
-
+    if (ht->array[index] != NULL && ht->array[index]->key == tmp->key)
+    {
+        tmp->next = NULL;
+        ht->array[index] = tmp;
+    }
+    else
+    {
+        tmp->next = ht->array[index];
+        ht->array[index] = tmp;
+    }
+    
     return (1);
 }
