@@ -1,0 +1,1 @@
+There will be task to practise and learn hash tables
